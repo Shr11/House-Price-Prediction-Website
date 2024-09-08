@@ -49,17 +49,18 @@ class ZipIngestor(Ingestor):
             
     # ex use
     if __name__ == "__main__":
-       # file_path = "/path/to/zipfile.zip"
+        
+       file_path = "https://github.com/Shr11/House-Price-Prediction-Website/tree/main/data.zip"
        
-       # # determine file extension
-       # file_extension = os.path.splitext(file_path)[1]
+       # determine file extension
+       file_extension = os.path.splitext(file_path)[1]
        
-       # # get the apt data ingestor
-       # data_ingestor = IngestorFactory.get_ingestor(file_extension)
+       # get the apt data ingestor
+       data_ingestor = IngestorFactory.get_ingestor(file_extension)
        
-       # # ingest data into df
-       # df = data_ingestor.ingest(file_path)
+       # ingest data into df
+       df = data_ingestor.ingest(file_path)
        
-       # # now df has data from extracted csv file
-       # print(df.head())
-       pass
+       # now df has data from extracted csv file
+       print(df.head())
+       # pass
